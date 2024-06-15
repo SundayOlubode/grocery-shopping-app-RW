@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shopping_app/utils/theme/theme.dart';
 
 void main() {
   runApp(App());
@@ -11,8 +12,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.system,
-      theme: ThemeData(),
-      darkTheme: ThemeData(),
+      theme: GSAppTheme.lightTheme,
+      darkTheme: GSAppTheme.darkTheme,
     );
   }
 }

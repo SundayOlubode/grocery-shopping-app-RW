@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class GSTextTheme {
   GSTextTheme._();
 
+  /// LIGHT TEXT THEME
   static TextTheme lightTextTheme = TextTheme(
     /// HEADLINE TEXT THEME
     headlineLarge: const TextStyle().copyWith(
@@ -38,6 +39,8 @@ class GSTextTheme {
         fontWeight: FontWeight.normal,
         color: Colors.black.withOpacity(0.5)),
   );
+
+  /// DARK TEXT THEME
   static TextTheme darkTextTheme = TextTheme(
     /// HEADLINE TEXT THEME
     headlineLarge: const TextStyle().copyWith(
