@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shopping_app/routes/auth/signup.dart';
 import 'package:grocery_shopping_app/utils/theme/theme.dart';
+
+import 'routes/auth/login.dart';
 
 void main() {
   runApp(App());
@@ -14,6 +17,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: GSAppTheme.lightTheme,
       darkTheme: GSAppTheme.darkTheme,
+      home: const SignUpScreen(),
     );
   }
 }
