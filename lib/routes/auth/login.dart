@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_shopping_app/routes/auth/forgot_password.dart';
 import 'package:grocery_shopping_app/routes/auth/signup.dart';
 import 'package:grocery_shopping_app/utils/constants/sizes.dart';
 import 'package:grocery_shopping_app/utils/constants/texts.dart';
@@ -20,13 +21,18 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                /// HEADER TEXT
                 Text(GSTexts.loginHeaderText,
                     style: Theme.of(context).textTheme.headlineMedium),
                 const SizedBox(height: GSSizes.spaceBtwSections),
+
+                /// FORM FIELDS
                 const GSTextFormField(GSTexts.email, Iconsax.direct),
                 const SizedBox(height: GSSizes.spaceBtwItems),
-                const GSTextFormField(GSTexts.password, Iconsax.password_check),
+                const GSTextFormField(GSTexts.password, Iconsax.lock),
                 const SizedBox(height: GSSizes.spaceBtwSections),
+
+                // BUTTON
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -36,9 +42,19 @@ class LoginScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(GSTexts.forgotPassword,
-                        style: Theme.of(context).textTheme.bodyLarge),
-                    InkWell(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ForgotPassword(),
+                          ),
+                        );
+                      },
+                      child: Text(GSTexts.forgotPassword,
+                          style: Theme.of(context).textTheme.bodyLarge),
+                    ),
+                    GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,

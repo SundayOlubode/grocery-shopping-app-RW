@@ -27,7 +27,7 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: GSSizes.spaceBtwItems),
                 const GSTextFormField(GSTexts.email, Iconsax.direct),
                 const SizedBox(height: GSSizes.spaceBtwItems),
-                const GSTextFormField(GSTexts.password, Iconsax.password_check),
+                const GSTextFormField(GSTexts.password, Iconsax.lock),
                 const SizedBox(height: GSSizes.spaceBtwSections),
                 SizedBox(
                   width: double.infinity,
@@ -38,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: GSSizes.spaceBtwSections),
                 Center(
-                  child: InkWell(
+                  child: GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
